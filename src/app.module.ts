@@ -9,17 +9,17 @@ import { env } from 'process';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Produit } from './produit/entities/produit.entity';
 
-
+console.log(env.DB_HOST)  
 @Module({
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: env.MYSQL_HOST,
-      port: parseInt(env.MYSQL_PORT),
-      username: env.MYSQL_USER,
-      password: env.MYSQL_PASSWORD,
-      database: env.MYSQL_DB_NAME,
+      host: env.DB_HOST,
+      port: parseInt(env.DB_PORT),
+      username: env.DB_USERNAME,
+      password: env.DB_PASSWORD,
+      database: env.DB_NAME,
       entities: [Produit],
       synchronize: true,
     }),

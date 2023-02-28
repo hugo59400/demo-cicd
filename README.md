@@ -1,6 +1,6 @@
  
 
-[lien du docker hub :](https://hub.docker.com/repository/docker/hugo59400/demo-backend/general)
+[lien du docker hub :](https://hub.docker.com/repository/docker/hugo59400/demo-cicd/general)
  
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>

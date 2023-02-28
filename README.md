@@ -1,4 +1,13 @@
- 
+ajouter un fichier .env : 
+DB_TYPE=mysql
+DB_HOST=<adresse du serveur>
+DB_PORT=<port mysql>
+DB_USERNAME=
+DB_PASSWORD=
+DB_NAME=
+NEST_PORT=8888 
+
+
 
 [lien du docker hub :](https://hub.docker.com/repository/docker/hugo59400/demo-cicd/general)
  

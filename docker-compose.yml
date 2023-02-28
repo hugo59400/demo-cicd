@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  db-produit:
+    image: mysql:8
+    volumes:
+      - ./database/data:/var/lib/mysql
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+    environment:
+      MYSQL_TCP_PORT: ${DB_PORT}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+
+  backend-produit:
+    restart: always
+    links:
+      - db-produit:${DB_HOST}
+    depends_on:
+      - db-produit
+    ports:
+      - "${NEST_PORT}:${NEST_PORT}"
+    expose:
+      - "${NEST_PORT}"
+    volumes:
+      - .:/usr/src/app
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    command: npm run start:dev
+    env_file: .env

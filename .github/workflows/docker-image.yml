@@ -24,4 +24,4 @@ jobs:
         context: .
         file: ./dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo-backend:${{github.ref_name}}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo-cicd:${{github.ref_name}}

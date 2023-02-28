@@ -8,4 +8,4 @@ RUN npm ci
 
 COPY --chown=node:node . .
 
-USER node
+USER node 

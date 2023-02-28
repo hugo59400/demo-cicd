@@ -3,6 +3,7 @@ version: "3.8"
 services:
   db-produit:
     image: mysql:8
+    container_name: mysql
     volumes:
       - ./database/data:/var/lib/mysql
     ports:
@@ -30,3 +31,5 @@ services:
     tty: true
     command: npm run start:dev
     env_file: .env
+
+

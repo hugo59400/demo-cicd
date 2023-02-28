@@ -9,7 +9,7 @@ import { env } from 'process';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Produit } from './produit/entities/produit.entity';
 
-console.log(env.DB_HOST)  
+console.log(env.DB_USERNAME)   
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -25,7 +25,7 @@ console.log(env.DB_HOST)
     }),
    
     ProduitModule,
-  
+   
   ],
   controllers: [AppController],
   providers: [AppService],
